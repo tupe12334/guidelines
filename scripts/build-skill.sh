@@ -47,8 +47,7 @@ cat > "$PLUGIN_DIR/plugin.json" <<'EOF'
 }
 EOF
 
-# 3. Update marketplace.json with current SHA
-SHA=$(git -C "$ROOT" rev-parse HEAD)
+# 3. Update marketplace.json
 RULE_COUNT=$(ls "$RULES_DIR"/*.md | wc -l | tr -d ' ')
 
 cat > "$PLUGIN_DIR/marketplace.json" <<EOF
@@ -67,13 +66,7 @@ cat > "$PLUGIN_DIR/marketplace.json" <<EOF
         "name": "tupe12334"
       },
       "category": "productivity",
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/tupe12334/guidelines.git",
-        "path": ".",
-        "ref": "main",
-        "sha": "$SHA"
-      },
+      "source": "./",
       "homepage": "https://github.com/tupe12334/guidelines",
       "skills": [
         "./skills/coding-guidelines"
@@ -85,4 +78,4 @@ EOF
 
 echo "Built: $SKILLS_DIR/SKILL.md ($RULE_COUNT rules)"
 echo "Built: $PLUGIN_DIR/plugin.json"
-echo "Built: $PLUGIN_DIR/marketplace.json (sha: ${SHA:0:7})"
+echo "Built: $PLUGIN_DIR/marketplace.json"
