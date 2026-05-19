@@ -3,7 +3,7 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 RULES_DIR="$ROOT/rules"
-SKILLS_DIR="$ROOT/.claude/skills/coding-guidelines"
+SKILLS_DIR="$ROOT/skills/coding-guidelines"
 PLUGIN_DIR="$ROOT/.claude-plugin"
 
 mkdir -p "$SKILLS_DIR" "$PLUGIN_DIR"
@@ -40,7 +40,10 @@ cat > "$PLUGIN_DIR/plugin.json" <<'EOF'
   "description": "Coding guidelines skill covering input validation, error handling, DDD structure, type safety, testing, and more.",
   "author": {
     "name": "tupe12334"
-  }
+  },
+  "skills": [
+    "./skills/coding-guidelines"
+  ]
 }
 EOF
 
@@ -71,7 +74,10 @@ cat > "$PLUGIN_DIR/marketplace.json" <<EOF
         "ref": "main",
         "sha": "$SHA"
       },
-      "homepage": "https://github.com/tupe12334/guidelines"
+      "homepage": "https://github.com/tupe12334/guidelines",
+      "skills": [
+        "./skills/coding-guidelines"
+      ]
     }
   ]
 }

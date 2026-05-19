@@ -4,5 +4,8 @@
   "description": "Coding guidelines skill covering input validation, error handling, DDD structure, type safety, testing, and more.",
   "author": {
     "name": "tupe12334"
-  }
+  },
+  "skills": [
+    "./skills/coding-guidelines"
+  ]
 }

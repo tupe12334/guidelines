@@ -18,9 +18,12 @@
         "url": "https://github.com/tupe12334/guidelines.git",
         "path": ".",
         "ref": "main",
-        "sha": "a4157fc02c5ae51fa0ce9dc14ce1c70b5546990a"
+        "sha": "29587432f703cc9b39da593939761495fd1c9bc7"
       },
-      "homepage": "https://github.com/tupe12334/guidelines"
+      "homepage": "https://github.com/tupe12334/guidelines",
+      "skills": [
+        "./skills/coding-guidelines"
+      ]
     }
   ]
 }
