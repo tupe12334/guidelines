@@ -1,7 +1,7 @@
 ---
 name: coding-guidelines
-description: Apply project coding guidelines input validation, error handling, DDD structure, type safety, testing, and more. Invoke when writing or reviewing code.
-version: 0.1.0
+description: Apply project coding guidelines input validation, error handling, DDD structure, type safety, testing, gRPC, Rust, linting, and more. Invoke when writing, reviewing, or planning code — including setting up a backend, API, service, or any new project.
+version: 0.1.1
 ---
 
 # Coding Guidelines
