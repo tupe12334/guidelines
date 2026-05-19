@@ -1,0 +1,26 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "guidelines",
+  "description": "Coding guidelines plugin: rules for input validation, error handling, DDD structure, type safety, testing, and more.",
+  "owner": {
+    "name": "tupe12334"
+  },
+  "plugins": [
+    {
+      "name": "guidelines",
+      "description": "Coding guidelines skill: 19 rules covering validation, error handling, DDD, type safety, and more.",
+      "author": {
+        "name": "tupe12334"
+      },
+      "category": "productivity",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/tupe12334/guidelines.git",
+        "path": ".",
+        "ref": "main",
+        "sha": "baa0684a2628835e735c7dc718955db77d6db577"
+      },
+      "homepage": "https://github.com/tupe12334/guidelines"
+    }
+  ]
+}

@@ -44,29 +44,39 @@ cat > "$PLUGIN_DIR/plugin.json" <<'EOF'
 }
 EOF
 
-# 3. Print marketplace.json entry
+# 3. Update marketplace.json with current SHA
 SHA=$(git -C "$ROOT" rev-parse HEAD)
 RULE_COUNT=$(ls "$RULES_DIR"/*.md | wc -l | tr -d ' ')
 
-echo ""
-echo "=== marketplace.json entry (paste into your marketplace index) ==="
-cat <<EOF
+cat > "$PLUGIN_DIR/marketplace.json" <<EOF
 {
+  "\$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "guidelines",
-  "description": "Coding guidelines skill: $RULE_COUNT rules covering validation, error handling, DDD, type safety, and more.",
-  "author": { "name": "tupe12334" },
-  "category": "productivity",
-  "source": {
-    "source": "git-subdir",
-    "url": "https://github.com/tupe12334/guidelines.git",
-    "path": ".",
-    "ref": "main",
-    "sha": "$SHA"
+  "description": "Coding guidelines plugin: rules for input validation, error handling, DDD structure, type safety, testing, and more.",
+  "owner": {
+    "name": "tupe12334"
   },
-  "homepage": "https://github.com/tupe12334/guidelines"
+  "plugins": [
+    {
+      "name": "guidelines",
+      "description": "Coding guidelines skill: $RULE_COUNT rules covering validation, error handling, DDD, type safety, and more.",
+      "author": {
+        "name": "tupe12334"
+      },
+      "category": "productivity",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/tupe12334/guidelines.git",
+        "path": ".",
+        "ref": "main",
+        "sha": "$SHA"
+      },
+      "homepage": "https://github.com/tupe12334/guidelines"
+    }
+  ]
 }
 EOF
 
-echo ""
 echo "Built: $SKILLS_DIR/SKILL.md ($RULE_COUNT rules)"
 echo "Built: $PLUGIN_DIR/plugin.json"
+echo "Built: $PLUGIN_DIR/marketplace.json (sha: ${SHA:0:7})"
