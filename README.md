@@ -14,6 +14,8 @@ Add to your project's `.claude/settings.json`:
 }
 ```
 
+Marketplace index: `https://github.com/tupe12334/guidelines/blob/main/.claude-plugin/marketplace.json`
+
 Claude Code will install the plugin and make the `coding-guidelines` skill available.
 
 ## Build
