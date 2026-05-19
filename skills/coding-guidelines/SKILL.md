@@ -1,6 +1,6 @@
 ---
 name: coding-guidelines
-description: Apply project coding guidelines: input validation, error handling, DDD structure, type safety, testing, and more. Invoke when writing or reviewing code.
+description: Apply project coding guidelines input validation, error handling, DDD structure, type safety, testing, and more. Invoke when writing or reviewing code.
 version: 0.1.0
 ---
 
@@ -80,4 +80,3 @@ Always validate env values at startup using a schema library (e.g. `env-schema`,
 ## Validate Inputs and Network Input
 
 Always validate data at system boundaries: user inputs, API responses, and any network-received data before use.
-
