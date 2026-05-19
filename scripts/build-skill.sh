@@ -13,8 +13,8 @@ mkdir -p "$SKILLS_DIR" "$PLUGIN_DIR"
   cat <<'FRONTMATTER'
 ---
 name: coding-guidelines
-description: Apply project coding guidelines input validation, error handling, DDD structure, type safety, testing, gRPC, Rust, linting, and more. Invoke when writing, reviewing, or planning code — including setting up a backend, API, service, or any new project.
-version: 0.1.1
+description: project coding guidelines input validation, error handling, DDD structure, type safety, testing, gRPC, Rust, linting, and more. Invoke when writing, reviewing, or planning code — including setting up a backend, API, service, or any new project.
+version: 0.1.2
 ---
 
 # Coding Guidelines
