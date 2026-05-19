@@ -3,7 +3,7 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 RULES_DIR="$ROOT/rules"
-SKILLS_DIR="$ROOT/skills/coding-guidelines"
+SKILLS_DIR="$ROOT/.claude/skills/coding-guidelines"
 PLUGIN_DIR="$ROOT/.claude-plugin"
 
 mkdir -p "$SKILLS_DIR" "$PLUGIN_DIR"
