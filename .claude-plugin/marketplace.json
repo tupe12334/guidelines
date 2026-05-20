@@ -16,7 +16,9 @@
       "source": "./",
       "homepage": "https://github.com/tupe12334/guidelines",
       "skills": [
-        "./skills/coding-guidelines"
+        "./skills/coding-guidelines",
+        "./skills/setup-rust",
+        "./skills/setup-node"
       ]
     }
   ]
