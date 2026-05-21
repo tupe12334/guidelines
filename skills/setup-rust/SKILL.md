@@ -2,8 +2,6 @@
 name: setup-rust
 description: Set up an opinionated Rust project in the current directory or a new named directory. Configures Cargo with common deps via cargo add, rustfmt, clippy, rust-toolchain, and git hooks. Use when initializing any Rust binary, library, or service.
 version: 0.1.2
-argument-hint: "[project-name or blank for cwd]"
-allowed-tools: Bash Read Write Edit
 ---
 
 # Setup Rust Project
