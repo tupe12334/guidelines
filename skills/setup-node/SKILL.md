@@ -1,6 +1,7 @@
 ---
 name: setup-node
 description: Set up an opinionated TypeScript Node.js project in the current directory or a new named directory. Uses pnpm via corepack, strict tsconfig, eslint-config-agent, Prettier, Vitest, and git hooks. Use when initializing any Node.js service, CLI, or library — not Next.js (use new-project-nextjs for that).
+version: 0.1.2
 argument-hint: "[project-name or blank for cwd]"
 allowed-tools: Bash Read Write Edit
 ---
